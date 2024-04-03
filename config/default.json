@@ -1,4 +1,4 @@
 {
   "jwtPrivateKey": "Bookstore_jwtPrivateKey",
-  "db": "mongodb+srv://jasonchanwq:${process.env.APP_PASSWORD}@bookstorecluster.rimtiep.mongodb.net/"
+  "db": "mongodb+srv://jasonchanwq:<password>@bookstoreapp.ptpmmkx.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=bookstoreapp"
 }

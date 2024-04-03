@@ -6,9 +6,9 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    res.send('Hello, team 30');
-    //const genres = await Genre.find().sort('name');
-    //res.send(genres);
+    //res.send('Hello, team 30');
+    const genres = await Genre.find().sort('name');
+    res.send(genres);
 });
 
 router.post('/', auth, async (req, res) => {
