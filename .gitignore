@@ -1,4 +1,2 @@
 node_modules/
 .vs/
-config/default.json
-config/custom-environment-variables.json
