@@ -6,7 +6,6 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    //res.send('Hello, team 30');
     const genres = await Genre.find().sort('name');
     res.send(genres);
 });
@@ -23,9 +22,9 @@ router.post('/', auth, async (req, res) => {
 });
 
 router.put('/:id', auth, async (req, res) => {
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-        return res.status(404).send('The given ID is invalid.');
-    }
+    //if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    //    return res.status(404).send('The given ID is invalid.');
+    //}
     const { error } = validate(req.body);
     if (error)
         return res.status(400).send(error.details[0].message);

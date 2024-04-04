@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
-const uri = "mongodb+srv://jasonchanwq:" + process.env.APP_PASSWORD +"@bookstoreapp.ptpmmkx.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=bookstoreapp";
+//const uri = "mongodb+srv://jasonchanwq:" + process.env.APP_PASSWORD +"@bookstoreapp.ptpmmkx.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=bookstoreapp";
 //const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
 module.exports = function () {
     const db = config.get('db');
+    const uri = db.replace('<password>', process.env.APP_PASSWORD);
+    console.log(uri);
     mongoose.connect(uri)
         .then(() => console.log(`Connected to ${db}`))
         .catch(err => console.error(`Could not connect to ${db}...`));

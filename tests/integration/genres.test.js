@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 let server;
 
-describe.skip('/genres', () => {
+describe('/genres', () => {
     beforeEach(() => { server = require('../../index'); })
     afterEach(async () => {
         server.close();

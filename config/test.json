@@ -1,4 +1,6 @@
 {
-    "jwtPrivateKey": "Bookstore_jwtPrivateKey",
-    "db": "mongodb://localhost/Bookstore_tests"
+  "jwtPrivateKey": "Bookstore_jwtPrivateKey",
+  "db": "mongodb://localhost/Bookstore_tests"
+  //"db": "mongodb+srv://jasonchanwq:<password>@bookstorecluster.rimtiep.mongodb.net/?retryWrites=true&w=majority&appName=BookstoreCluster"
+
 }
