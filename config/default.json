@@ -1,5 +1,5 @@
 {
   "jwtPrivateKey": "Bookstore_jwtPrivateKey",
-  //"db": "mongodb://localhost/Bookstore"
-  "db": "mongodb+srv://jasonchanwq:<password>@bookstoreapp.ptpmmkx.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=bookstoreapp"
+  "db": "mongodb://localhost/Bookstore"
+  //"db": "mongodb+srv://jasonchanwq:<password>@bookstoreapp.ptpmmkx.mongodb.net/Bookstore?retryWrites=true&w=majority&appName=bookstoreapp"
 }

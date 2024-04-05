@@ -8,7 +8,7 @@ module.exports = function (req, res, next) {
     if (!token) return res.status(401).send('Access denied. No token provided.');
 
     try {
-        const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
+        const decoded = jwt.verify(token, config.get('jwtPrivateKey').replace('<Bookstore_jwtPrivateKey>', process.env.APP_KEY));
         req.user = decoded;
         next();
     }
