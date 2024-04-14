@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Register from './Components/Register';  // Capitalized path
-import Login from './Components/Login';  // Capitalized path
-import UserProfile from './Components/UserProfile';  // Capitalized path
-import EditCustomer from './Components/EditCustomer';  // Capitalized path
-import BooksList from './Components/BooksList';  // Capitalized path
-import Cart from './Components/Cart';  // Capitalized path
-import SubmitOrder from './Components/SubmitOrder';  // Capitalized path
-import ViewOrder from './Components/ViewOrder';  // Capitalized path
+import Register from './Components/Register';
+import Login from './Components/Login';
+import UserProfile from './Components/UserProfile';
+import EditCustomer from './Components/EditCustomer';
+import BooksList from './Components/BooksList';
+import Cart from './Components/Cart';
+import SubmitOrder from './Components/SubmitOrder';
+import ViewOrder from './Components/ViewOrder';
 
 function App() {
   return (
