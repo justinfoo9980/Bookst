@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Register from './Components/Register';
 import Login from './Components/Login';
@@ -10,21 +10,28 @@ import SubmitOrder from './Components/SubmitOrder';
 import ViewOrder from './Components/ViewOrder';
 
 function App() {
+  const [path, setPath] = useState()
+
+  useEffect(() => {
+    setPath(window.location.pathname)
+  },[])
+
   return (
     <Router>
       <div>
+        {path !== '/books' && 
         <nav>
           <ul>
             <li><Link to="/register">Register</Link></li>
             <li><Link to="/login">Login</Link></li>
             <li><Link to="/profile">User Profile</Link></li>
             <li><Link to="/edit-profile">Edit Customer</Link></li>
-            <li><Link to="/books">View Books</Link></li>
+            <li onClick={() => setPath('/books')}><Link to="/books">View Books</Link></li>
             <li><Link to="/cart">View Cart</Link></li>
             <li><Link to="/submit-order">Submit Order</Link></li>
             <li><Link to="/view-order">View Order</Link></li>
           </ul>
-        </nav>
+        </nav>}
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

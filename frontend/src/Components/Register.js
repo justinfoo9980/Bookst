@@ -14,9 +14,12 @@ function Register() {
     e.preventDefault();
     setLoading(true);
     setError('');
+
     try {
-      const response = await axios.post('https://calm-mountain-10484-296975bbfc99.herokuapp.com/users', formData);
-      console.log('Registered successfully:', response.data);
+      // const response = await axios.post('http://localhost:3000/users', formData);
+      const responseTest = await axios.get('http://localhost:3000/users');
+      console.log(responseTest)
+      // console.log('Registered successfully:', response.data);
       // Redirect or handle response
       setLoading(false);
       // Redirect to login or other appropriate page
@@ -28,14 +31,14 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label>Username:</label>
       <input type="text" name="username" value={formData.username} onChange={handleChange} />
       <label>Email:</label>
       <input type="email" name="email" value={formData.email} onChange={handleChange} />
       <label>Password:</label>
       <input type="password" name="password" value={formData.password} onChange={handleChange} />
-      <button type="submit" disabled={loading}>{loading ? 'Registering...' : 'Register'}</button>
+      <button type="submit" onClick={handleSubmit} disabled={loading}>{loading ? 'Registering...' : 'Register'}</button>
       {error && <p>{error}</p>}
     </form>
   );
