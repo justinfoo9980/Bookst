@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const genres = require('../routes/genres');
 const customers = require('../routes/customers');
 const books = require('../routes/books');
@@ -8,6 +9,7 @@ const carts = require('../routes/carts');
 const auth = require('../routes/auth');
 
 module.exports = function (app) {
+    app.use(cors())
     app.use(express.json());
     app.use('/genres', genres);
     app.use('/customers', customers);

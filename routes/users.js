@@ -9,6 +9,12 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+    const users = await User.find().sort('name');
+    console.log(users)
+    res.send(users);
+});
+
 router.get('/me', auth, async (req, res) => {
     const user = await User.findById(req.user._id).select('-password');//exclusion of password using -
     res.send(user);
