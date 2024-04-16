@@ -1,11 +1,12 @@
 import { useRef } from "react";
+import styles from "./AddList.module.css";
 //change to buttons to press to buy books//
 
 const AddList = ({ newItem, setNewItem, handleSubmit }) => {
   const inputRef = useRef();
 
   return (
-    <form className="addForm" onSubmit={handleSubmit}>
+    <form className={styles.addForm} onSubmit={handleSubmit}>
       <label htmlFor="addItem">Add Item</label>
 
       <input

@@ -1,0 +1,17 @@
+.bookContainer {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.eachBookContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4,
+p {
+  width: fit-content;
+}

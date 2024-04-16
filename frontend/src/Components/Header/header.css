@@ -1,0 +1,11 @@
+header {
+  background: #0077cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-items: start;
+}
