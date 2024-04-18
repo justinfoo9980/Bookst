@@ -3,7 +3,7 @@ import axios from "axios";
 
 function Register() {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     password: "",
     email: "",
   });
@@ -38,11 +38,11 @@ function Register() {
 
   return (
     <form>
-      <label>Username:</label>
+      <label>Name:</label>
       <input
         type="text"
-        name="username"
-        value={formData.username}
+        name="name"
+        value={formData.name}
         onChange={handleChange}
       />
       <label>Email:</label>

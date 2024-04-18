@@ -32,7 +32,9 @@ function BooksList() {
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
-
+  const addToCart = (bookID) => {
+    console.log("Ädd book to cart:", bookID);
+  };
   return (
     <div className="">
       <h1 className="background">View Books</h1>
@@ -51,7 +53,7 @@ function BooksList() {
             <h4>{book.name}</h4>
             <p>Genre: {book.genre.name}</p>
             <p>Price: ${book.price}</p>
-            <button>Add to cart</button>
+            <button onClick={() => addToCart(book._id)}>Add to cart</button>
           </div>
         ))}
       </div>

@@ -6,8 +6,8 @@ import {
   Link,
   BrowserRouter,
 } from "react-router-dom";
-import Register from "./Components/Register";
-import Login from "./Components/Login";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
 import UserProfile from "./Components/UserProfile";
 import EditCustomer from "./Components/EditCustomer";
 import BooksList from "./Components/BooksList/BooksList";
