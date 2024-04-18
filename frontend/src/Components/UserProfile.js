@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function UserProfile() {
   const [user, setUser] = useState(null);
@@ -7,12 +7,17 @@ function UserProfile() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('https://calm-mountain-10484-296975bbfc99.herokuapp.com/user/customers', {
-          headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-        });
+        const response = await axios.get(
+          "https://calm-mountain-10484-296975bbfc99.herokuapp.com/user/me",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setUser(response.data);
       } catch (error) {
-        console.error('Error fetching user profile:', error);
+        console.error("Error fetching user profile:", error);
       }
     };
 
